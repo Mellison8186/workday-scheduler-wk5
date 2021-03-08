@@ -15,7 +15,7 @@ $('.saveBtn').on('click', function(){
 $('#8').val(window.localStorage.getItem('8'));
 console.log(window.localStorage.getItem('8'));
 
-// function to check event time
+// function to check timeNow against eventHour time
 var checkTime = function() {
     $('input').each(function() {
         var timeNow = parseInt(moment().format('HH'));
@@ -25,6 +25,9 @@ var checkTime = function() {
     }
     if (eventHour === timeNow) {
         $(this).addClass('present');
+    }
+    if (eventHour > timeNow) {
+        $(this).addClass('future');
     }
     })
 };
