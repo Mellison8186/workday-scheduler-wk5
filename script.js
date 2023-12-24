@@ -11,7 +11,7 @@ $(".saveBtn").on("click", function () {
   window.localStorage.setItem(hour, description);
 });
 
-// retrieves event from local storage -- vv copy for each hour
+// retrieves event from local storage -- copy for each hour
 $("#8").val(window.localStorage.getItem("8"));
 console.log(window.localStorage.getItem("8"));
 
